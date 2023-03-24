@@ -8,5 +8,8 @@
     "start": "node index.js"
   },
   "author": "jonggurl96",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pace": "^0.0.4"
+  }
 }
