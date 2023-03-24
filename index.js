@@ -1,7 +1,13 @@
-const {
-    requireFunc
-} = require('./require');
-requireFunc();
+const mode = process.env.mode;
 
-const pace = require('./pacejs_lotto');
-pace.calcDrwNo();
+if(!mode || mode === "require") {
+    const {
+        requireFunc
+    } = require('./require');
+    requireFunc();
+}
+
+if(!mode || mode === "async") {
+    const Async = require('./async');
+    Async.getLotto();
+}

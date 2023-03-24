@@ -10,7 +10,6 @@
   "author": "jonggurl96",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.4",
-    "pace": "^0.0.4"
+    "moment": "^2.29.4"
   }
 }
