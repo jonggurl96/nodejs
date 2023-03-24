@@ -9,11 +9,10 @@ const calcDrwNo = () => {
 
 async function getLotto() {
     const maxDrwNo = calcDrwNo();
-    for (let i = 801; i <= maxDrwNo; i++) {
-        console.log(i);
-        const res = await fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${i}`);
-        if(res.ok) {
-            const data = await res.json();
+    for (let i = 1055; i <= maxDrwNo; i++) {
+        const response = await fetch(`https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${i}`);
+        if(response.ok) {
+            const data = await response.json();
             console.log(data);
         }
     }
