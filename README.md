@@ -1,5 +1,7 @@
 # Node.js 연습하기
 [notion link](https://jonggurl96.notion.site/NodeJS-d44746ec8f7548b681b4b351e06e69ae)
+### UI 상관없는 모듈만 연습함
+> UI 관련 모듈은 [HTMLCSSJS repository](https://github.com/jonggurl96/HTMLCSSJS)
 #### *원하는 모듈만 실행하기*
 ```sh
 npm start --mode=<module name>
