@@ -13,3 +13,6 @@ npm start --mode=<module name>
 
 2. [async](async/README.md)
 > 로또 api 전체 비동기 통신으로 불러오기 (많이 하면 에러남)
+
+3. [moment](moment/README.md)
+> moment.js 씹어먹기
