@@ -3,8 +3,13 @@
 ### UI 상관없는 모듈만 연습함
 > UI 관련 모듈은 [HTMLCSSJS repository](https://github.com/jonggurl96/HTMLCSSJS)
 #### *원하는 모듈만 실행하기*
+- script
 ```sh
-npm start --mode=<module name>
+npm start --mode=<param>
+```
+- javascript
+```javascript
+const mode = process.env.npm_config_<param>;
 ```
 ## *Directories*
 > directory name = module name

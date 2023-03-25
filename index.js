@@ -11,3 +11,8 @@ if(!mode || mode === "async") {
     const Async = require('./async');
     Async.getLotto();
 }
+
+if(!mode || mode ==="moment") {
+    const moment = require('./moment');
+    moment();
+}
