@@ -7,7 +7,15 @@
 npm i moment --save
 npm start --mode=moment
 ```
+# 사용법
+```javascript
+const moment = require('moment');
+moment().format();
 
+//Or in ES6 syntax:
+import moment from 'moment';
+moment().format();
+```
 
 
 
