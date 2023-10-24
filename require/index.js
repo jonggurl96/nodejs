@@ -1,6 +1,6 @@
-const { moduleName, add, sub } = require("./calc");
+import { moduleName, add, sub } from "./calc.js";
 
-const { nonHyperoperations, tetration, pentation, hexation, overs } = require('./hyperoperation');
+import { nonHyperoperations, tetration, pentation, hexation, overs } from './hyperoperation.js';
 
 const requireFunc = () => {
     const [a, b] = [10, 5];
@@ -16,6 +16,4 @@ const requireFunc = () => {
     console.log(overs);
 };
 
-module.exports = {
-    requireFunc
-};
+requireFunc();

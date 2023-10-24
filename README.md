@@ -5,7 +5,7 @@
 #### *원하는 모듈만 실행하기*
 - script
 ```sh
-npm start --mode=<param>
+npm start --<param>=<value>
 ```
 - javascript
 ```javascript
@@ -20,4 +20,7 @@ const mode = process.env.npm_config_<param>;
 > 로또 api 전체 비동기 통신으로 불러오기 (많이 하면 에러남)
 
 3. [moment](moment/README.md)
-> moment.js 씹어먹기
+> moment.js@2.29.4
+
+4. [three.js](three/README.md)
+> Three.js@0.157.0

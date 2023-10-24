@@ -1,4 +1,4 @@
-const nonHyperoperations = {
+export const nonHyperoperations = {
     description: "not hyper operations",
     operation0: "increasement",
     operation1: "plus",
@@ -6,10 +6,7 @@ const nonHyperoperations = {
     operation3: "exponent"
 }
 
-module.exports = {
-    nonHyperoperations,
-    tetration: "a↑↑b",
-    pentation: "a↑↑↑b",
-    hexation: "a↑↑↑↑b",
-    overs: undefined
-}
+export const tetration = "a↑↑b";
+export const pentation = "a↑↑↑b";
+export const hexation = "a↑↑↑↑b";
+export const overs = undefined;

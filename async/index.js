@@ -1,4 +1,4 @@
-const moment = require("moment");
+import moment from 'moment';
 
 const calcDrwNo = () => {
     const today = moment();
@@ -14,10 +14,11 @@ async function getLotto() {
         if(response.ok) {
             const data = await response.json();
             console.log(data);
+            return data;
         }
     }
 }
 
-module.exports = {
-    getLotto
-}
+getLotto().then((data) => {
+    console.log(data);
+});

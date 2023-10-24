@@ -1,6 +1,6 @@
-const moment = require("moment");
+import moment from 'moment';
 const fmt = "YYYY-MM-DD HH:mm:ss.SSS Z";
-module.exports = () => {
+const momentFunc =  () => {
     console.log(`moment(): ${moment().format(fmt)} is now`);
 
     console.log(`moment("1996-05-10"): ${moment("1996-05-10").format(fmt)}`);
@@ -17,3 +17,5 @@ module.exports = () => {
     console.log(`moment("2013-02-08 09-0100"): ${moment("2013-02-08 09-0100").format(fmt)}`);
     console.log(`moment("2013-02-08 09Z"): ${moment("2013-02-08 09Z").format(fmt)}`);
 }
+
+momentFunc();

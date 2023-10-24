@@ -1,8 +1,4 @@
-const add = (a, b) => a + b;
-const sub = (a, b) => a - b;
+export const add = (a, b) => a + b;
+export const sub = (a, b) => a - b;
 
-module.exports = {
-    moduleName: "caculate add and sub",
-    add,
-    sub
-}
+export const moduleName = "calculate add and sub";
