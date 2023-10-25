@@ -8,7 +8,8 @@
     "start": "node index.js",
     "require": "node require",
     "async": "node async",
-    "moment": "node moment"
+    "moment": "node moment",
+    "three": "node three"
   },
   "author": "jonggurl96",
   "license": "ISC",
