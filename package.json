@@ -13,6 +13,7 @@
   "author": "jonggurl96",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "moment": "^2.29.4",
     "three": "^0.157.0"
   },
