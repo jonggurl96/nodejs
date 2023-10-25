@@ -8,6 +8,15 @@
 			margin: 0;
 			display: block;
 		}
+
+		#info {
+			position: absolute;
+			top: 10px;
+			width: 100%;
+			text-align: center;
+			z-index: 100;
+			display: block;
+		}
 	</style>
 	<script type="importmap">
 		{
@@ -21,23 +30,43 @@
 		import * as THREE from 'three';
 		import WebGL from "three/addons/capabilities/WebGL.js";
 
-		const div = document.getElementById("WebGLAvailable");
+		const div = document.getElementById("info");
 		const availableTHREE = WebGL.isWebGLAvailable();
-		div.innerText = availableTHREE;
 
 		const scene = new THREE.Scene();
-		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
 
 		const renderer = new THREE.WebGLRenderer();
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		document.body.appendChild(renderer.domElement);
 
-		const geometry = new THREE.BoxGeometry(1, 1, 1);
-		const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-		const cube = new THREE.Mesh(geometry, material);
+		const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+		const boxMaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+		const cube = new THREE.Mesh(boxGeometry, boxMaterial);
 		scene.add(cube);
 
-		camera.position.z = 5;
+		const lineBasicMaterial = new THREE.LineBasicMaterial({
+			color: 0x0000ff,
+		});
+		const lineBasicGeometry = new THREE.BufferGeometry().setFromPoints([
+			new THREE.Vector3(-3, 0, 0),
+			new THREE.Vector3(0, 3, 0),
+			new THREE.Vector3(3, 0, 0)
+		]);
+		const lineBasic = new THREE.Line(lineBasicGeometry, lineBasicMaterial);
+		scene.add(lineBasic);
+
+		const lineDashedMaterial = new THREE.LineDashedMaterial( { color: 0xff0000 } );
+		const lineDashedGeometry = new THREE.BufferGeometry().setFromPoints([
+			new THREE.Vector3(3, 0, 0),
+			new THREE.Vector3(0, -3, 0),
+			new THREE.Vector3(-3, 0, 0)
+		]);
+		const lineDashed = new THREE.Line(lineDashedGeometry, lineDashedMaterial);
+		scene.add(lineDashed);
+
+		camera.position.z = 10;
+		camera.lookAt(0, 0, 0);
 
 		const animate = () => {
 			const func = availableTHREE ? (() => {
@@ -54,6 +83,8 @@
 	</script>
 </head>
 <body>
-<div id="WebGLAvailable"></div>
+<div id="before"></div>
+<div id="info"></div>
+<div id="after"></div>
 </body>
 </html>
